@@ -1,0 +1,152 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.container-main {
+  width: 100%;
+  position: relative;
+  height: 90vh;
+  color: $color-soft-gray;
+  max-width: 1440px;
+  
+  .drone-alt {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.5));
+  }
+  
+  .drone-alt, .drone-alt2, .drone-alt3, .name, .advantage, .price, .description, .circle-blur-main {
+    position: absolute;
+    height: auto;
+    text-align: justify;
+  }
+
+  .circle-blur-main {
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+
+  .drone-alt2, .drone-alt3 {
+    width: 20%;
+    background-color: $color-soft-orange;
+    border-radius: 50%;
+  }
+
+  .drone-alt2 {
+    top: 5%;
+    right: 5%;
+  }
+
+  .drone-alt3 {
+    bottom: 5%;
+    left: 5%;
+  }
+
+  .circle-blur-main {
+    opacity: .2;
+  }
+
+  .name {
+    top: 0;
+    background-color: rgba($color: $color-gray , $alpha: 0.2);
+    width: 50%;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    font-family: $ff-tertiary;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .description, .advantage {
+    color: rgba($color: $color-dark-gray, $alpha: 1.0);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1.5vh;
+    transition: all .5s;
+    z-index: 2;
+
+    &:hover {
+      color: $color-gray;
+    }
+  }
+
+  .advantage {
+    top: 12.5vh;
+    width: 30%;
+    left: 40vw;
+    font-size: 1.5vw;
+  }
+
+  .description {
+    bottom: 12.5vh;
+    right: 0;
+    font-size: 1.5vw;
+    width: 50%;
+  }
+
+  .description:hover ~ .line-anim-2, .advantage:hover ~ .line-anim-1 {
+    background-color: $color-gray;
+  }
+
+  .description:hover ~ .line-anim-2 {
+    width: 60%;
+  }
+
+  .advantage:hover ~ .line-anim-1 {
+    width: 32.5%;
+  }
+
+  .price {
+    width: auto;
+    bottom: 0;
+    right: 0;
+    @extend .display-center; 
+    font-family: $ff-tertiary;
+    font-size: 1.2vw;
+    background-color: rgba($color: $color-gray , $alpha: 0.2);
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    z-index: 2;
+    transition: all .5s;
+
+    .nav-arrow {
+      filter: invert(100%) saturate(00%) hue-rotate(180deg) brightness(80%);
+      scale: 1;
+      margin-left: 1vw;
+      transition: all .5s;
+    }
+    
+    &:hover {
+      background-color: $color-soft-gray;
+      color: $color-darkest-gray;
+      
+      .nav-arrow{
+        filter: none;
+        scale: 1.8;
+        margin-left: 1.5vw;
+      }
+    }
+  }
+
+  .line-anim-1, .line-anim-2 {
+    position: absolute;
+    width: 0%;
+    background-color: transparent;
+    height: 1px;
+    transition: all .5s;
+  }
+
+  .line-anim-1 {
+    top: 10%;
+    left: 40vw;
+  }
+  
+  .line-anim-2 {
+    bottom: 10%;
+    right: 0;
+  }
+}

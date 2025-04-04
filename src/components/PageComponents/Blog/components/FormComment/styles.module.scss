@@ -1,0 +1,21 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.form-container {
+  width: 70vw;
+  height: 40vw;
+  background: linear-gradient(to top, $color-darkest-gray, $color-dark-gray);
+  border: 1px solid $color-dark-gray;
+  border-radius: 25px;
+  padding: .5em;
+
+  .form {
+    width: 100%;
+
+    .input {
+      width: 100%;
+      background-color: $color-gray;
+      color: $color-soft-gray;
+    }
+  }
+}

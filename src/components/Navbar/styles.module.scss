@@ -1,0 +1,64 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.container-navbar {
+  background-color: rgba($color-darkest-gray, .2);
+  backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 40px;
+  border-bottom: 1px solid $color-darkest-gray;
+  padding: 0 50px;
+  @extend .display-between;
+  position: fixed;
+  z-index: 999;
+
+  .btnLogo {
+    background-color: transparent;
+
+    .logo {
+      height: 40px;
+      width: auto;
+      padding-right: 2vw;
+    }
+  }
+
+  .container-center-buttons {
+    @extend .display-center;
+    gap: 10px;
+    height: 100%;
+
+    .button {
+      transition: all .5s;
+      width: 80px;
+      padding: 0;
+
+      &:hover .text-btn{
+        color: $color-darkest-gray;
+      }
+
+      .text-btn {
+        font-family: $ff-secondary;
+        font-size: 12px;
+        font-weight: $fw-light;
+        color: $color-soft-gray;   
+        text-transform: uppercase
+      }
+    }
+  }
+
+  .container-right-buttons {
+    @extend .display-center;
+    gap: 20px;
+
+    .icon {
+      width: 25px;
+      height: auto;
+      cursor: pointer;
+      filter: invert(100%) saturate(00%) hue-rotate(180deg) brightness(80%);
+    }
+  }
+}
+
+.offBtn {
+  cursor: no-drop !important;
+}

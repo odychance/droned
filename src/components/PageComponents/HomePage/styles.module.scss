@@ -1,0 +1,17 @@
+@import '/src/theme/variables.scss';
+
+.container-home-page {
+  display: flex;
+  flex-direction: column;
+  padding: calc($safearea * 4);
+  // overflow: hidden;
+  width: 100vw;
+  gap: 10vh 0;
+}
+
+.class-image {
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  right: 0;
+}

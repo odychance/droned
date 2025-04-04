@@ -1,0 +1,40 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.main-container {
+  width: 100vw;
+  @extend .display-center;
+  flex-direction: column;
+  margin: calc($safearea * -1);
+
+  .header-title {
+    @extend .display-center;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - $safearea);
+    font-family: $ff-normal;
+    font-weight: $fw-regular;
+    font-size: 5vw;
+    color: $color-soft-gray;
+    z-index: 2;
+    filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.9));
+
+    
+    .focus-title {
+      font-family: $ff-secondary;
+      font-size: 6vw;
+      letter-spacing: .5vw;
+      color: $color-soft-orange;
+    }
+  }
+
+  .circle-blur {
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    z-index: 1;
+    scale: 3;
+    opacity: .4;
+  }
+
+}

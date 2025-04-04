@@ -1,0 +1,57 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.container-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: $color-darkest-gray, $alpha: .5);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  @extend .display-center;
+
+  .button {
+    background-color: rgba($color-dark-gray, 0.8);
+    border: 1px solid $color-soft-gray;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0;
+    transition: all .5s ease-in-out;
+    
+    .left-line, .right-line {
+      position: absolute;
+      width: 30px;
+      height: 6px;
+      background-color: $color-gray;
+      transition: all 1s ease-in-out;
+      border-radius: 50px;
+    }
+
+    .left-line {
+      transform: rotate(45deg);
+    }
+    
+    .right-line {
+      transform: rotate(-45deg);
+    }
+    
+    &:hover {
+      background-color: $color-soft-gray;
+      
+      .left-line {
+        transform: rotate(405deg);
+        
+      }
+      .right-line {
+        transform: rotate(-405deg);
+        
+      }
+    }
+  }
+}

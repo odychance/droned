@@ -1,0 +1,55 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.main-container {
+  width: 100vw;
+
+  .drone-target-title {
+    padding: 1vw;
+    text-align: center;
+    font-style: italic;
+    line-height: 10vh;
+    margin: 2em 0;
+
+    color: $color-soft-orange;
+    font-family: $ff-secondary;
+    text-transform: uppercase;
+
+  }
+
+  .wrapper-products {
+    display: flex;
+    @extend .display-center;
+    flex-direction: column;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1vw;
+      max-width: 1480px;
+    }
+
+    .button {
+      background-color: $color-soft-gray;
+      margin: 4vw auto;
+      padding: .8vw 2vw; 
+      border-radius: 50px;
+      font-size: 1.2vw;
+      width: auto;
+      height: auto;
+
+      .arrow-class {
+        filter: drop-shadow(10px 10px 10px $color-dark-gray);
+        scale: 1.2;
+      }
+
+      &:hover {
+        background-color: $color-natural;
+
+        .arrow-class {
+          scale: 2;
+        }
+      }
+    }
+  }
+}

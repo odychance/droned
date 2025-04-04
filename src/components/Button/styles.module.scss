@@ -1,0 +1,42 @@
+@import '/src/theme/extends.scss';
+@import '/src/theme/variables.scss';
+
+.button {
+  @extend .display-center;
+  width: max-content;
+  height: 20px;
+  font-size: 1vw;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all .5s;
+  padding: 1vw 2vw;
+
+  .icon {
+    filter: invert(100%) saturate(00%) hue-rotate(180deg) brightness(80%);
+    scale: 1;
+    transition: all .5s;
+    margin-left: .5vw;
+  }
+  
+  &:hover {
+    background-color: $color-soft-gray;
+    
+    .icon{
+      margin-left: 1vw;
+      filter: none;
+      scale: 1.8;
+    }
+  }
+}
+
+.orange-var {
+  background-color: rgba($color: $color-dark-gray, $alpha: .5);
+  color: $color-soft-gray;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $color-dark-gray;
+    border-color: $color-soft-orange;
+    color: $color-soft-orange;
+  }
+}

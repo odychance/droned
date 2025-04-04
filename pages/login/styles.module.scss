@@ -1,0 +1,38 @@
+@import "/src/theme/variables.scss";
+@import "/src/theme/extends.scss";
+
+.container-page {
+  @extend .display-center;
+  justify-content: right;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .form {
+    z-index: 1;
+    background-color: rgba($color-darkest-gray, 0.6);
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+      padding: 1em;
+      color: $color-soft-gray;
+      font-family: $ff-tertiary;
+    }
+  }
+}

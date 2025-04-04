@@ -1,0 +1,105 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: $safearea;
+  border-top: 1px solid $color-gray;
+
+  .container-info {
+    @extend .display-between;
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      scale: .7;
+      display: flex;
+      width: 100%;
+    }
+
+    .container-legal-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+      padding: 2vw;
+      width: 100%;
+      
+      .button {
+        width: auto;
+        font-size: .8vw;
+        padding: 1.2vw;
+        color: $color-gray;
+
+        &:hover {
+          color: $color-soft-orange;
+          background-color: $color-dark-gray;
+        }
+      }
+    }
+
+    .container-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-end;
+      gap: 1vh;
+      width: 100%;
+      
+      .network-item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1vw;
+        padding: 1vw 0;
+        width: 2vw;
+        transition: all .5s ease-in-out;
+        overflow: hidden;
+        
+        .network-image {
+          width: 2vw;
+          height: auto;
+          filter: grayscale(100%) brightness(100%) contrast(60%) ;
+        } 
+        
+        .network-name {
+          font-size: 1.2vw;
+          font-family: $ff-normal;
+          font-weight: $fw-regular;
+          color: $color-dark-gray;
+          transition: all .5s ease-in;
+          text-align: center;
+          width: 100%;
+  
+          &:hover {
+            color: $color-darkest-gray;
+          }
+        }
+  
+        &:hover {
+          width: 15vw;
+          background-color: $color-natural;
+
+          .network-image {
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .copyright {
+    width: 70%;
+    text-align: center;
+    padding: $safearea;
+    font-family: $ff-normal;
+    font-weight: $fw-medium;
+    font-size: 1.2vw;
+    color: $color-dark-gray;
+    border-top: 1px solid $color-gray;
+  }
+}

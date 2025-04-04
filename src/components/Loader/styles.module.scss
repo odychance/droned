@@ -1,0 +1,81 @@
+@import '/src/theme/variables.scss';
+
+.loaderContainer {
+  background-color: $color-darkest-gray;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $color-natural;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+  transition: all .8s cubic-bezier(.75,.25,.25,.75);
+}
+
+.hidde {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 1;
+}
+
+.preloader {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  top: 80vh;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5vw;
+  font-family: $ff-primary;
+  font-size: 2vw;
+  text-transform: uppercase;
+}
+
+.counter {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 12vw;
+  height: 5vw;
+  display: flex;
+  gap: 0.4vw;
+  font-size: 4vw;
+  overflow: hidden;
+}
+
+.digitAlign {
+  position: absolute;
+  top: 0%;
+}
+
+.digit1 {
+  left: 0%;
+}
+
+.digit2 {
+  left: 25%;
+}
+
+.digit3 {
+  left: 50%;
+}
+
+.digit4 {
+  position: absolute;
+  top: 0%;
+  left: 70%;
+}
+
+
+
+
+
+.progressBar {
+  width: 0vw;
+  height: 1vh;
+  margin-right: 2vw;
+  background-color: $color-natural;
+}

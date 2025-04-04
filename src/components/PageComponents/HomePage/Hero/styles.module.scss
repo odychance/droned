@@ -1,0 +1,95 @@
+@import '/src/theme/variables.scss';
+@import '/src/theme/extends.scss';
+
+.container-hero {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 40px;
+  position: relative;
+  @extend .display-center;
+  margin-bottom: 10vh;
+
+
+  .container-header {
+    z-index: 1;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background-color: rgba($color-darkest-gray, .98);
+    position: relative;
+    box-shadow: 0 0 20px 40px rgba(0, 0, 0, .5); 
+
+    .main-drone {
+      width: 80vw;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.9));
+      z-index: 2;
+    }
+
+    .title {
+      color: $color-soft-gray;
+      font-family: $ff-normal;
+      font-weight: $fw-bold;
+      position: absolute;
+      text-align: center;
+      font-size: 8vw;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.9))
+    }
+
+    .title-top {
+      top: 60%;     
+      z-index: 3; 
+      color: $color-white;
+    }
+
+    .title-bottom {
+      font-weight: $fw-medium;
+      width: 100%;
+      top: 74%;
+      font-size: 5vw;
+      z-index: 1;
+      filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.9)) blur(.6px);
+    }
+
+    .button {
+      position: absolute;
+      bottom: 2vh;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50px;
+      font-family: $ff-normal;
+      font-weight: $fw-medium;
+      font-size: 1.2vw;
+      background-color: $color-white;
+      width: auto;
+      height: auto;
+      padding: 10px 20px;
+    }
+  }
+
+  .DJI-MINI {
+    position: absolute;
+    font-family: $ff-secondary;
+    font-weight: $fw-bold;
+    font-size: 24vw;
+    text-wrap: nowrap;
+    line-height: 25vh;
+    filter: drop-shadow(10px 5px 8px rgba(0, 0, 0, 0.9)) blur(3px);
+    
+    .soft-gray {
+      margin-left: -5vw;
+      color: $color-soft-gray;
+    }
+
+    .light-gray {
+      color: $color-gray;
+      margin-left: 5vw;
+    }
+  }
+}

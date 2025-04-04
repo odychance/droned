@@ -1,0 +1,9 @@
+@import '/src/theme/variables.scss';
+
+.container-bounded {
+  padding: $safearea;
+}
+
+.top-space {
+  padding-top: 40px;
+}
