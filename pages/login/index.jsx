@@ -9,7 +9,7 @@ const SignUpPage = () => {
     <div className={s["container-page"]}>
       <Image src={bgImage} className={s["bg-image"]} alt="bg image" />
       <form className={s["form"]}>
-        <p>Let's start shopping</p>
+        <p>Let&apos;s start shopping</p>
           <AuthForm />
       </form>
     </div>

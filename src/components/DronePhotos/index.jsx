@@ -44,7 +44,7 @@ const DronePhotos = () => {
     <div className={s["container-photos"]} id="prueba">
       <div className={s["bg-sticky"]}>
         <Image src={drone1} alt="main image" className={s["bg-image"]}/>
-        <p className={s["slogan"]} ref={textRef}>We don't just sell<br/> drones,<br/>we sell experiences.</p>
+        <p className={s["slogan"]} ref={textRef}>We don&apos;t just sell<br/> drones,<br/>we sell experiences.</p>
       </div>
 
       <div className={s["wrapper-images"]}>

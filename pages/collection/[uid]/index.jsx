@@ -20,7 +20,7 @@ const DroneDetails = () => {
           <div className={s["left-info"]}>
             <p className={s["description"]}>{item?.description}</p>
             <p className={s["advantage"]}>{item?.advantage}</p>
-            {item?.stock > 0 ? <p className={s["available"]}>It's available, Buy now.</p> : <p className={s["empty"]}>Sorry, item not available.</p>}
+            {item?.stock > 0 ? <p className={s["available"]}>It&apos;s available, Buy now.</p> : <p className={s["empty"]}>Sorry, item not available.</p>}
           </div>
           <Image alt="image" src={item?.imageUrl} className={s["image-item"]}/>
           <Image alt="image" src={circuleBlur} className={s["circle-blur"]}/>

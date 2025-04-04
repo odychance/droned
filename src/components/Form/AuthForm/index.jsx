@@ -84,7 +84,7 @@ const AuthForm = ({ registerForm, setUserInfo }) => {
         </section>
       }
 
-      { alert && <Alert>Passwords don't match</Alert>}
+      { alert && <Alert>Passwords don&apos;t match</Alert>}
 
       { registerForm &&
           <section className={s["section"]}>
