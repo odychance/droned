@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button } from '..'
 import facebook from '/src/assets/images/network-icons/facebook.png'
 import instagram from '/src/assets/images/network-icons/instagram.png'
-import linkedIn from '/src/assets/images/network-icons/linkedIn.png'
+import linkedIn from '/src/assets/images/network-icons/linkedin.png'
 import gmail from '/src/assets/images/network-icons/gmail.png'
 
 const Footer = () => {
