@@ -2,8 +2,9 @@
 @import '/src/theme/extends.scss';
 
 .container-trust {
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  overflow-x: hidden;
   @extend .display-center;
   padding: calc($safearea * 4);
   pointer-events: none;
@@ -24,8 +25,8 @@
     .circle-blur {
       position: absolute;
       left: 50%;
-      transform: translateX(-33%);
-      scale: 1.5;
+      transform: translateX(-50%);
+      scale: 1;
       opacity: .1;
     }
     
@@ -63,6 +64,51 @@
 
         .info-description {
           font-size: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-trust {
+    flex-direction: column;
+    gap: 1rem;
+
+    .hook-question {
+      color: $color-soft-gray;
+    }
+
+    .container-center {
+      width: 100%;
+      flex-direction: column;
+      gap: 10vh;
+
+      .circle-blur {
+        width: 150%;
+        height: 100%;
+        opacity: .05;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
+      .wrapper {
+        width: 100%;
+
+        &:nth-of-type(2) {
+          border-inline: none;
+          padding-inline: 2vw;
+        }
+
+        .info {
+          .info-title {
+            font-size: 3vw;
+          }
+          .info-description {
+            font-size: 2vw;
+          }
         }
       }
     }

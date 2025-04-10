@@ -150,3 +150,57 @@
     right: 0;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .name {
+    left: 50% !important;
+    transform: translateX(-50%);
+    font-size: 4vw !important;
+    border-radius: 10px !important;
+  }
+
+  .advantage {
+    left: 2vw !important;
+  }
+
+  .description {
+    right: 2vw !important;
+  }
+
+  .advantage, .description {
+    width: 70% !important;
+    font-size: 3vw !important;
+    color: $color-gray !important;
+  }
+
+  .line-anim-1 {
+    left: 2vw !important;
+  }
+  
+  .line-anim-2 {
+    right: 2vw !important;
+  }
+  
+  .line-anim-2, .line-anim-1 {
+    background-color: $color-gray !important;
+    height: 1px !important;
+    width: 70% !important;
+  }
+
+  .price {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 30% !important;
+    font-size: 1.6vw !important;
+
+    background-color: $color-soft-gray !important; 
+    color: $color-darkest-gray !important;
+    
+
+    .nav-arrow {
+      filter: invert(100%) saturate(00%) hue-rotate(180deg) brightness(80%);
+      scale: 1.8 !important;
+      margin-left: 1.5vw !important;
+    }
+  }
+}

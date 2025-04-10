@@ -5,9 +5,8 @@
   position: relative;
   width: 100vw;
   height: 440vh;
-  margin: calc($safearea * -4);
   z-index: 1;
-
+  
   .bg-sticky {
     position: sticky;
     top: 0;

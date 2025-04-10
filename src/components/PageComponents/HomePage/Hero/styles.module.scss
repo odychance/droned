@@ -3,11 +3,13 @@
 
 .container-hero {
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
   padding-top: 40px;
   position: relative;
+  top: -10vh;
   @extend .display-center;
   margin-bottom: 10vh;
+  overflow: hidden;
 
 
   .container-header {
@@ -91,5 +93,12 @@
       color: $color-gray;
       margin-left: 5vw;
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-hero {
+    height: 100vh;
+    margin-bottom: 0vh;
   }
 }

@@ -3,10 +3,13 @@
 .container-home-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: calc($safearea * 4);
-  // overflow: hidden;
-  width: 100vw;
   gap: 10vh 0;
+
+
+  // max-width: 100vw !important;
 }
 
 .class-image {

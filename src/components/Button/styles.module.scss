@@ -40,3 +40,11 @@
     color: $color-soft-orange;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .icon {
+    margin-left: 2vw !important;
+    filter: none !important;
+    scale: 1.6 !important;
+  }
+}

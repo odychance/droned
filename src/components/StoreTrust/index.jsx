@@ -28,7 +28,7 @@ const StoreTrust = () => {
     <div className={s["container-trust"]}>
       <p className={s["hook-question"]}>Why choose our store?</p>
       <div className={s["container-center"]}>
-      <Image src={circleBlur} alt="bg blur" className={s["circle-blur"]}/>
+        <Image src={circleBlur} alt="bg blur" className={s["circle-blur"]}/>
         { qualities.map((item, idx) => (
           <div className={s["wrapper"]} key={idx}>
             <Image src={item.icon} className={s["icon"]} alt="image" />
